@@ -21,7 +21,6 @@ type Customer struct {
 func InsertCustomer(c *Customer) *Customer {
 	o := orm.NewOrm()
 	c.CustomerId = common.GetUUID()
-	fmt.Println(*c)
 	id, err := o.Insert(c)
 	fmt.Println(id, err)
 	return c
